@@ -1,0 +1,26 @@
+header img{
+    height: 900px;
+    width: 100%;
+}
+.intro-text{
+    width: 30%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1s all ease-in-out;
+    padding-top: 100px;
+}
+.intro h2{
+    text-align: center;
+}
+.intro-content{
+    display: flex;
+    justify-content: flex-end;
+    justify-content: space-around;
+}
+.intro-appear{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.empty{
+    height: 1000px;
+}
