@@ -16,7 +16,7 @@ window.addEventListener("load", () => {
     pad.addEventListener("click", function () {
       sounds[index].currentTime = 0;
       sounds[index].play();
-      createBubble1(index);
+      createBubble(index);
     });
   });
 
@@ -31,15 +31,4 @@ window.addEventListener("load", () => {
       visual.removeChild(this);
     });
   };
-
-  function createBubble1(index) {
-    const bubble = document.createElement("div");
-    visual.appendChild(bubble);
-    //Set color for bubbles
-    bubble.style.backgroundColor = colors[index];
-    bubble.style.animation = `jump 1s ease`;
-    bubble.addEventListener("animationend", function () {
-      visual.removeChild(this);
-    });
-  }
 });
