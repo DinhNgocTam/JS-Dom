@@ -10,6 +10,7 @@ addListBtn.addEventListener("click", function () {
     
     //Add the input value inside that new li
     
+    
     newLi.appendChild(liContent);
     //Attaching the li to the user list
     newLi.style.color = "green";

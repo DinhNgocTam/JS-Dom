@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="service">
+        <label for="">Massage = 18$</label>
+        <input
+          name="Massage"
+          class="messageCheckbox"
+          type="checkbox"
+          value="18"
+          onchange="change()"
+        />
+        <br />
+        <label for="">Food = 10$</label>
+        <input
+          name="Food"
+          class="messageCheckbox"
+          type="checkbox"
+          value="10"
+          onchange="change()"
+        />
+        <br />
+        <label for="">Drink = 5$</label>
+        <input
+          name="Drink"
+          class="messageCheckbox"
+          type="checkbox"
+          value="5"
+          onchange="change()"
+        />
+        <br />
+        <label for="">Swim = 9$</label>
+        <input
+          name="Swim"
+          class="messageCheckbox"
+          type="checkbox"
+          value="9"
+          onchange="change()"
+        />
+      </div>
+      <div class="totalPrice">
+        <h1>Service</h1>
+        <h1 class="service-selected"></h1>
+        <hr />
+        <form action="">
+          <input type="text" class="price" value="Total: $0" readonly />
+        </form>
+      </div>
+    </div>
+  </body>
+  <script>
+    const change = () => {
+      var temp = "";
+      var total = 0;
+      const checkBox = document.querySelectorAll(".messageCheckbox");
+      const result = document.querySelector(".service-selected");
+      const price = document.querySelector(".price");
+      result.innerHTML = null;
+
+      checkBox.forEach((element) => {
+        if (element.checked) {
+          temp += "<br> " + element.name;
+          total += Number(element.value);
+        }
+      });
+      result.innerHTML = temp;
+      price.value = `Total:$${total}`;
+    };
+  </script>
+</html>
